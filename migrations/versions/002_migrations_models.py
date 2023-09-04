@@ -17,8 +17,9 @@ def upgrade():
     conn = op.get_bind()
 
     if not conn.dialect.has_table(conn, "Meetings"):
-        conn.execute(text(
-            """
+        conn.execute(
+            text(
+                """
             CREATE TABLE Meetings (
                id UUID NOT NULL,
                place VARCHAR(100) NOT NULL,
@@ -26,7 +27,8 @@ def upgrade():
                create_date timestamp NOT NULL,
                update_date timestamp NOT NULL,
             )
-            """)
+            """
+            )
         )
 
 

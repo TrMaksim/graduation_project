@@ -17,8 +17,9 @@ def upgrade():
     conn = op.get_bind()
 
     if not conn.dialect.has_table(conn, "Comments"):
-        conn.execute(text(
-            """
+        conn.execute(
+            text(
+                """
             CREATE TABLE Comments (
                id UUID NOT NULL,
                comment TEXT NOT NULL,
@@ -29,7 +30,8 @@ def upgrade():
                 FOREIGN KEY ("client_id")
                   REFERENCES Сlients("id")
                 );
-            """)
+            """
+            )
         )
 
 

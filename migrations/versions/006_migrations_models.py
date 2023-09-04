@@ -17,8 +17,9 @@ def upgrade():
     conn = op.get_bind()
 
     if not conn.dialect.has_table(conn, "Purchase"):
-        conn.execute(text(
-            """
+        conn.execute(
+            text(
+                """
             CREATE TABLE Purchases (
                 id UUID NOT NULL,
                 purchase_amount INTEGER NOT NULL,
@@ -26,7 +27,8 @@ def upgrade():
                 create_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                 update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             );
-            """)
+            """
+            )
         )
 
 

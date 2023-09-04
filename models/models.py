@@ -3,7 +3,7 @@ from uuid import uuid4
 from sqlalchemy.orm import relationship
 from sqlalchemy import Column, UUID, String, DateTime, ForeignKey, Integer
 from sqlalchemy.ext.declarative import declarative_base
-from geoalchemy2 import Geometry
+#  I want see change in my code
 from sqlalchemy import create_engine
 
 engine = create_engine("postgresql://maksym:123456@localhost/graduation_db")

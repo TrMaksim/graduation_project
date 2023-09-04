@@ -1,10 +1,17 @@
 from datetime import datetime
 from uuid import uuid4
-from sqlalchemy.orm import relationship
-from sqlalchemy import Column, UUID, String, DateTime, ForeignKey, Integer
+
+from sqlalchemy import (
+    UUID,
+    Column,
+    DateTime,
+    ForeignKey,
+    Integer,
+    String,
+    create_engine,
+)
 from sqlalchemy.ext.declarative import declarative_base
-#  I want see change in my code
-from sqlalchemy import create_engine
+from sqlalchemy.orm import relationship
 
 engine = create_engine("postgresql://maksym:123456@localhost/graduation_db")
 Base = declarative_base()

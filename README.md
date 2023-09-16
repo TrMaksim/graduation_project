@@ -1,4 +1,4 @@
-#### Project "System for distributing expenses for meetings with friends"
+## Project "System for distributing expenses for meetings with friends"
 # Project description.
 The project "System for distributing expenses for meetings with friends" is designed to automate the distribution of expenses between meeting participants. Every week, a group of friends meets in a cafe to drink tea and chat. The software solution helps to automatically calculate how much each participant should contribute to equalize the total cost.
 

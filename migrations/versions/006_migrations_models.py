@@ -16,16 +16,20 @@ down_revision = None
 def upgrade():
     conn = op.get_bind()
 
-    if not conn.dialect.has_table(conn, "Purchase"):
+    if not conn.dialect.has_table(conn, "Purchases"):
         conn.execute(
             text(
                 """
             CREATE TABLE Purchases (
-                id UUID NOT NULL,
+                id UUID NOT NULL PRIMARY KEY,
+                meeting_id UUID NOT NULL,
                 purchase_amount INTEGER NOT NULL,
                 description VARCHAR(30) NOT NULL,
                 create_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                CONSTRAINT FK_Purchases_meeting_id
+                    FOREIGN KEY (meeting_id)
+                    REFERENCES Meetings(id)
             );
             """
             )
@@ -34,4 +38,4 @@ def upgrade():
 
 def downgrade():
     conn = op.get_bind()
-    conn.execute("DROP TABLE Purchase")
+    conn.execute("DROP TABLE Purchases")

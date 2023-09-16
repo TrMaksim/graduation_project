@@ -21,12 +21,11 @@ def upgrade():
             text(
                 """
             CREATE TABLE Meetings (
-               id UUID NOT NULL,
+               id UUID NOT NULL PRIMARY KEY,
                place VARCHAR(100) NOT NULL,
                time_meeting timestamp NOT NULL,
                create_date timestamp NOT NULL,
-               update_date timestamp NOT NULL,
-            )
+               update_date timestamp NOT NULL)
             """
             )
         )

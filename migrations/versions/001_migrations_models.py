@@ -16,19 +16,18 @@ down_revision = None
 def upgrade():
     conn = op.get_bind()
 
-    if not conn.dialect.has_table(conn, "Сlients"):
+    if not conn.dialect.has_table(conn, "Clients"):
         conn.execute(
             text(
                 """
-            CREATE TABLE Сlients (
-                id UUID NOT NULL, 
+            CREATE TABLE Clients (
+                id UUID NOT NULL PRIMARY KEY, 
                 username VARCHAR(50) NOT NULL, 
                 email VARCHAR(255) NOT NULL, 
-                password VARCHAR(36) NOT NULL, 
+                password VARCHAR(255) NOT NULL, 
                 phone VARCHAR(20) NOT NULL, 
                 create_date TIMESTAMP NOT NULL, 
-                update_date TIMESTAMP NOT NULL
-            )
+                update_date TIMESTAMP NOT NULL)
             """
             )
         )

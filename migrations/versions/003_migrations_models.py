@@ -21,15 +21,15 @@ def upgrade():
             text(
                 """
             CREATE TABLE ClientsMeetings (
-               id UUID NOT NULL,
+               id UUID NOT NULL PRIMARY KEY,
                client_id UUID NOT NULL,
                meeting_id UUID NOT NULL,
-              CONSTRAINT FK_ClientsMeetings.client_id
-                FOREIGN KEY ("client_id")
-                  REFERENCES Сlients("id"),
-              CONSTRAINT FK_ClientsMeetings.meeting_id
-                FOREIGN KEY ("meeting_id")
-                  REFERENCES Meetings("id")
+              CONSTRAINT FK_ClientsMeetings_client_id
+                FOREIGN KEY (client_id)
+                  REFERENCES Clients(id),
+              CONSTRAINT FK_ClientsMeetings_meeting_id
+                FOREIGN KEY (meeting_id)
+                  REFERENCES Meetings(id)
             );
             """
             )

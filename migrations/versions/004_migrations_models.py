@@ -21,14 +21,14 @@ def upgrade():
             text(
                 """
             CREATE TABLE Comments (
-               id UUID NOT NULL,
+               id UUID NOT NULL PRIMARY KEY,
                comment TEXT NOT NULL,
                client_id UUID NOT NULL,
                update_date TIMESTAMP NOT NULL,
                create_date TIMESTAMP NOT NULL,
-              CONSTRAINT FK_Comments.client_id
-                FOREIGN KEY ("client_id")
-                  REFERENCES Сlients("id")
+              CONSTRAINT FK_Comments_client_id
+                FOREIGN KEY (client_id)
+                  REFERENCES Clients(id)
                 );
             """
             )

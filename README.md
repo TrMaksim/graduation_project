@@ -1,47 +1,47 @@
-<strong>Проект "Система розподілу витрат на зустрічі з друзями"</strong>
-### Опис проекту
-Проект "Система розподілу витрат на зустрічі з друзями" розроблений для автоматизації розподілу витрат між учасниками зустрічей. Кожен тиждень група друзів зустрічається у закладі, щоб випити чаю та поспілкуватися. Програмне рішення допомагає автоматично розрахувати, скільки кожен учасник повинен внести грошей, щоб вирівняти загальні витрати.
+### Project "System for distributing expenses for meetings with friends"
+# Project description.
+The project "System for distributing expenses for meetings with friends" is designed to automate the distribution of expenses between meeting participants. Every week, a group of friends meets in a cafe to drink tea and chat. The software solution helps to automatically calculate how much each participant should contribute to equalize the total cost.
 
-### Основні функціональні можливості:
+# Main functionalities:
 
-# Реєстрація користувачів: Користувачі можуть зареєструвати свої облікові записи, вказавши свій email, пароль, телефон та ім'я користувача.
-# Авторизація користувачів: Зареєстровані користувачі можуть авторизуватися за допомогою свого email та паролю.
-# Створення зустрічей: Користувачі можуть створювати нові зустрічі, вказуючи місце та дату зустрічі.
-# Додавання учасників до зустрічі: Користувачі можуть додавати інших користувачів до своїх зустрічей, вказуючи їх ідентифікатори.
-# Створення покупок: Під час зустрічі користувачі можуть створювати записи про покупки, вказуючи суму, опис та учасників, які спільно сплатили за цю покупку.
-# Розрахунок боргів: Система автоматично розраховує, скільки кожен учасник зустрічі повинен іншим учасникам, щоб вирівняти загальні витрати.
-# Коментарі до витрат: Користувачі можуть додавати коментарі до кожної покупки, щоб вказати, за що саме були зроблені витрати.
-# Захист даних: Проект забезпечує безпеку даних користувачів, використовуючи аутентифікацію та авторизацію, а також шифрування паролів.
+User registration: Users can register their accounts by providing their email, password, phone number, and username.
+User authorization: Registered users can log in with their email and password.
+Creating appointments: Users can create new meetings by specifying a meeting location and date.
+Adding participants to a meeting: Users can add other users to their meetings by specifying their IDs.
+Creating purchases: During the meeting, users can create purchase records by specifying the amount, description, and participants who jointly paid for this purchase.
+Debt calculation: The system automatically calculates how much each meeting participant owes to other participants to equalize the total costs.
+Comments on expenses: Users can add comments to each purchase to indicate what exactly the expense was for.
+Data protection: The project ensures the security of user data using authentication and authorization, as well as password encryption.
 
-## Інструкція з встановлення і запуску
-## Склонуйте репозиторій проекту з GitHub:
+## Installation and startup instructions
+# Upload your project repository from GitHub:
 ```
 git clone https://github.com/your-repository.git
 cd your-repository
 ```
-## Встановіть необхідні залежності за допомогою pip:
+# Install the necessary dependencies using pip:
 ```
 pip install -r requirements.txt
 ```
-## Запустіть сервер за допомогою uvicorn:
+# Start the server using uvicorn:
 ```
 uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 ```
-## Після запуску, ваше веб-застосування буде доступним за адресою:
+# After launching, your web application will be available at the following address:
 ```
 http://localhost:8000
 ```
-## Використані технології
-# Python та фреймворк FastAPI для розробки веб-застосунку.
-# SQLAlchemy для роботи з базою даних.
-# JWT для аутентифікації та авторизації користувачів.
-# База даних для зберігання даних користувачів, зустрічей, покупок та боргів.
-![Модель базы данных]![Blank diagram (3)](https://github.com/TrMaksim/graduation_project/assets/127137829/db2c3b0e-3188-428f-a6f6-afbd7d752db3)
+# Technologies used
+Python and the FastAPI framework for developing a web application.
+SQLAlchemy for working with the database.
+JWT for user authentication and authorization.
+Database for storing user data, appointments, purchases, and debts.
+[Database model]![Blank diagram (3)](https://github.com/TrMaksim/graduation_project/assets/127137829/db2c3b0e-3188-428f-a6f6-afbd7d752db3)
 
-## Автори
-# Проект розроблений [Trachuk Maksym].
+# Author
+Trachuk Maksym for suggestions contact the author by e-mail `tracukmaksim@gmail.com`.
 
-## Ліцензія
-Этот проект распространяется под лицензией [MIT]([[ссылка-на-лицензию](https://opensource.org/licenses/MIT)](https://opensource.org/license/mit/)).
+# License
+This project is distributed under the license [MIT]([[ссылка-на-лицензию](https://opensource.org/licenses/MIT)](https://opensource.org/license/mit/)).
 
-Цей проект створений для зручного та справедливого розподілу витрат під час зустрічей з друзями та може бути використаний для обліку спільних витрат між будь-якою групою людей. Насолоджуйтесь вашими зустрічами та нехай ця система полегшить вам життя!
+This project was created for convenient and fair distribution of expenses during meetings with friends and can be used to account for shared expenses between any group of people. Enjoy your meetings and let this system make your life easier!
